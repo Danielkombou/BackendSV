@@ -317,6 +317,8 @@ app.get("/search-notes/", AuthenticateToken, async (req, res) => {
     }
 });
 
-app.listen(8000);
+// Start server anywhere
+const PORT = process.env.PORT || 8000
+app.listen(PORT);
 
 module.exports = app;
