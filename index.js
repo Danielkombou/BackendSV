@@ -17,7 +17,7 @@ const { AuthenticateToken } = require("./utilities.js");
 app.use(express.json())
 
 app.use(cors({
-    origin: "*",
+    origin: "https://notes-app-three-puce.vercel.app"
 })
 );
 
@@ -317,8 +317,7 @@ app.get("/search-notes/", AuthenticateToken, async (req, res) => {
     }
 });
 
-// Start server anywhere
-const PORT = process.env.PORT || 8000
-app.listen(PORT);
+// Start server
+app.listen(8000);
 
 module.exports = app;
