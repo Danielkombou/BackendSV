@@ -18,7 +18,6 @@ const { AuthenticateToken } = require("./utilities.js");
 app.use(express.json())
 
 app.use(cors({
-    origin: "https://notes-app-three-puce.vercel.app"
 })
 );
 
