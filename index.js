@@ -1,9 +1,10 @@
 require("dotenv").config();
 
-const config = require("./config.json");
-const mongoose =require("mongoose")
+// const config = require("./config.json");
+const mongoose =require("mongoose");
 
-mongoose.connect(config.connectionString);
+const uri = process.env.ATLAS_URI
+mongoose.connect(uri);
 
 const User = require("./models/user.model");
 const Note = require("./models/note.model");
@@ -318,6 +319,7 @@ app.get("/search-notes/", AuthenticateToken, async (req, res) => {
 });
 
 // Start server
-app.listen(8000);
+port = process.env.PORT || 8000;
+app.listen(port);
 
 module.exports = app;
