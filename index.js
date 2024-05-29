@@ -15,11 +15,8 @@ const app = express();
 const jwt = require("jsonwebtoken")
 const { AuthenticateToken } = require("./utilities.js");
 
-app.use(express.json())
-
-app.use(cors({
-})
-);
+app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
     res.json({ data: 'hello'});
