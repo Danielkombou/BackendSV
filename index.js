@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 // const config = require("./config.json");
-const mongoose =require("mongoose");
+const mongoose = require("mongoose");
 
 const uri = process.env.ATLAS_URI
 mongoose.connect(uri);
